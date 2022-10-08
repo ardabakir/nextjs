@@ -15,3 +15,12 @@ a {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Belgium Victory;
+  src: url(/BelgiumVictory.ttf);
+}
+
+@font-face {
+  font-family: Belgium Victory Italic;
+  src: url(/BelgiumVictoryItalic.ttf);
+}

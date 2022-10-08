@@ -73,7 +73,29 @@ export default function Home() {
             <h3 className={styles.subtitle}>
               Çaylar
             </h3>
-            <p className={styles.coffee}>lorem ipsum</p>
+            <p className={styles.coffee}>Demleme</p>
+            <p className={styles.coffee}>Earl Grey</p>
+            <p className={styles.coffee}>Acai & Ananas</p>
+            <p className={styles.coffee}>Mistik Çay</p>
+            <p className={styles.coffee}>Ananas & Hindistan Cevizi</p>
+            <p className={styles.coffee}>Kırmızı Meyveler</p>
+            <p className={styles.coffee}>Orman Meyveleri</p>
+            <p className={styles.coffee}>Mango & Şeftali</p>
+            <p className={styles.coffee}>Tropikal</p>
+            <p className={styles.coffee}>Kavun</p>
+            <p className={styles.coffee}>Kayısı</p>
+            <p className={styles.coffee}>Elma</p>
+            <p className={styles.coffee}>Afrika Güneşi</p>
+            <p className={styles.coffee}>Ballı Kafeinsiz</p>
+            <p className={styles.coffee}>Elma, Hurma & İncir</p>
+            <p className={styles.coffee}>Ahududu & Çilek (Soğuk)</p>
+          </div>
+          <div className={styles.card}>
+            <h3 className={styles.subtitle}>
+              Hazır Kahveler
+            </h3>
+            <p className={styles.coffee}>Chai Tea Latte</p>
+            <p className={styles.coffee}>White Chocolate Mocha</p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.subtitle}>
