@@ -8,31 +8,18 @@ import { motion,useScroll } from "framer-motion"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
-  // useEffect(() => {
-  //   gsap.to(topBean.current,{
-  //     scrollTrigger: 
-  //     {
-  //       endTrigger: bottomBean.current,
-  //       trigger: topBean.current,
-  //       pin:true,
-  //       pinSpacing:false,
-  //       pinSpacer:false,
-  //       markers:true,
-  //       start: "top top",
-  //       end: "top 160px",
-  //       scrub: 1
-  //     },
-  //     })
-  //}, [])
+
   const {scrollY} = useScroll()
   const [isFixed,setIsFixed] = useState(true)
   const [y,setY] = useState(0)
-  const [opacity,setOpacity] = useState(1)
+  const [opacity,setOpacity] = useState(0)
+  const [menuOpacity,setMenuOpacity] = useState(0)
   useEffect(() => {
     scrollY.onChange((y) => {
       setIsFixed(y < window.innerHeight-320)
       setY(y)
-      setOpacity(1-(y/(window.innerHeight/3)))
+      setOpacity((y/(window.innerHeight/3)))
+      setMenuOpacity((y/(window.innerHeight)))
       console.log(y);
     })
     console.log("herhangi bir şey");
@@ -51,13 +38,13 @@ export default function Home() {
 
       <div className={styles.landing}>
         <motion.div className={styles.topBeans} style={{position: isFixed ? 'fixed' : 'absolute',bottom: !isFixed && '160px'}}/>     
-        <h1 className={styles.title} style={{opacity:opacity,position:'absolute',top:'50%',transform:`translateY(${-y/5}px)`}}>
+        <h1 className={styles.title} style={{opacity:1-opacity,position:'absolute',top:'50%',transform:`translateY(${-y/5}px)`}}>
             Selen&apos;s Homemade Coffee Shop
         </h1>
         <div className={styles.botBeans} ref={bottomBean}/>
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.container} style={{opacity:menuOpacity}}>
         <main className={styles.main}>
 
           <h2 className={styles.menu}>
