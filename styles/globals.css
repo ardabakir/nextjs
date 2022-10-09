@@ -24,3 +24,18 @@ a {
   font-family: Belgium Victory Italic;
   src: url(/BelgiumVictoryItalic.ttf);
 }
+
+@font-face {
+  font-family: Louis George Cafe;
+  src: url(/LouisGeorgeCafe.ttf);
+}
+
+@font-face {
+  font-family: Louis George Cafe Italic;
+  src: url(/LouisGeorgeCafeItalic.ttf);
+}
+
+@font-face {
+  font-family: Louis George Cafe Bold Italic;
+  src: url(/LouisGeorgeCafeBoldItalic.ttf);
+}
